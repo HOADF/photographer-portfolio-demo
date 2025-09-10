@@ -112,7 +112,12 @@
             border: none;
             cursor: pointer;
         }
-        
+        .portfolio-image {
+         background-color: #f0f0f0;
+         min-height: 250px;
+         object-fit: cover;
+        }
+
         /* Hero */
         .hero {
             height: 100vh;

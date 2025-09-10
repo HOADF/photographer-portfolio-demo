@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Иван Иванов - Профессиональный фотограф</title>
+    <title>Иван Иванов - Фотограф</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rei="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container header__inner">
-            <a href="/" class="header__logo">Иван<span>Иванов</span></a>
+        <div class="container header-inner">
+            <a href="#" class="logo">Иван Иванов</a>
             
             <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Портфолио</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Обо мне</a></li>
-                    <li class="nav__item"><a href="#blog" class="nav__link">Блог</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link">Отзывы</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
                 </ul>
             </nav>
             
-            <div class="header__social">
-                <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social__link"><i class="fab fa-vk"></i></a>
-                <a href="#" class="social__link"><i class="fab fa-telegram"></i></a>
-            </div>
-            
-            <button class="header__toggle" id="menuToggle">
+            <button class="mobile-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -37,41 +31,318 @@
     
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu__close" id="menuClose">
+        <button class="mobile-close" id="menuClose">
             <i class="fas fa-times"></i>
         </button>
         
         <nav class="mobile-nav">
-            <ul class="mobile-nav__list">
-                <li class="mobile-nav__item"><a href="#portfolio" class="mobile-nav__link">Портфолио</a></li>
-                <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Услуги</a></li>
-                <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">Обо мне</a></li>
-                <li class="mobile-nav__item"><a href="#blog" class="mobile-nav__link">Блог</a></li>
-                <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Контакты</a></li>
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="#portfolio" class="mobile-nav-link">Портфолио</a></li>
+                <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">Обо мне</a></li>
+                <li class="mobile-nav-item"><a href="#services" class="mobile-nav-link">Услуги</a></li>
+                <li class="mobile-nav-item"><a href="#testimonials" class="mobile-nav-link">Отзывы</a></li>
+                <li class="mobile-nav-item"><a href="#contact" class="mobile-nav-link">Контакты</a></li>
             </ul>
         </nav>
-        
-        <div class="mobile-social">
-            <a href="#" class="mobile-social__link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="mobile-social__link"><i class="fab fa-vk"></i></a>
-            <a href="#" class="mobile-social__link"><i class="fab fa-telegram"></i></a>
-        </div>
     </div>
+    
+    <div class="overlay" id="overlay"></div>
     
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero__background">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Фоновая фотография" loading="eager">
-        </div>
-        
-        <div class="hero__content">
-            <h1 class="hero__title">Профессиональная фотосъемка для ваших особенных моментов</h1>
-            <p class="hero__subtitle">Создаю искренние и эмоциональные фотографии, которые расскажут вашу уникальную историю</p>
-            <button class="hero__button">Забронировать съемку</button>
+        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Фотограф за работой" class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-title">Профессиональная фотография</h1>
+            <p class="hero-subtitle">Запечатлеваю ваши самые важные моменты с искусством и вниманием к деталям</p>
+            <a href="#contact" class="btn">Связаться со мной</a>
         </div>
     </section>
     
-<script src="main.js"></script>
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Портфолио</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Свадебная фотография" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Свадьбы</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Портретная фотография" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Портреты</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1526662092590-e314cbeaf8da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Семейная фотография" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Семейные фотосессии</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Фэшн фотография" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Фэшн</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1798&q=80" alt="Пейзажная фотография" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Пейзажи</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Архитектурная фотография" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Архитектура</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-inner">
+                <div class="about-content">
+                    <p class="about-text">Меня зовут Иван Иванов, я профессиональный фотограф с более чем 10-летним опытом работы. Моя страсть к фотографии началась еще в детстве и с годами переросла в любимую профессию.</p>
+                    <p class="about-text">Я специализируюсь на свадебной, портретной и предметной фотографии. Мой подход сочетает в себе художественное видение и внимание к деталям, чтобы создавать неповторимые образы для каждого клиента.</p>
+                    <p class="about-text">Мои работы были опубликованы в различных журналах и выставках. Я постоянно совершенствую свои навыки, посещая мастер-классы и фотографические выставки по всему миру.</p>
+                    <a href="#contact" class="btn">Обсудить проект</a>
+                </div>
+                <img src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Артем Урнев - фотограф" class="about-image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section-title">Услуги</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 class="service-title">Свадебная фотосъёмка</h3>
+                    <p class="service-text">Полное сопровождение вашего специального дня, от подготовки до позднего вечера. Натуральные и эмоциональные кадры.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="service-title">Портретная фотосъёмка</h3>
+                    <p class="service-text">Индивидуальные и групповые портреты в студии или на природе. Подчеркиваю вашу индивидуальность и характер.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="service-title">Семейная фотосъёмка</h3>
+                    <p class="service-text">Тёплые и искренние семейные фотографии, которые сохранят воспоминания о самых важных моментах вашей семьи.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="service-title">Фэшн-фотосъёмка</h3>
+                    <p class="service-text">Создание портфолио для моделей, lookbook для брендов и редакционные съемки для журналов.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3 class="service-title">Предметная фотосъемка</h3>
+                    <p class="service-text">Профессиональная съемка товаров для каталогов, рекламы и интернет-магазинов.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="service-title">Архитектурная фотосъемка</h3>
+                    <p class="service-text">Съемка интерьеров и экстерьеров зданий для архитектурных бюро, дизайнеров и застройщиков.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="testimonials-slider">
+                <p class="testimonial-text">"Иван сделал невероятные свадебные фотографии! Он поймал самые искренние эмоции нашего дня. Каждый раз, когда смотрим фото, переживаем те моменты заново. Спасибо за профессионализм и творческий подход!"</p>
+                <p class="testimonial-author">- Мария и Алексей</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-inner">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea id="message" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить сообщение</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span>ivan@ivanov.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <span>Москва, ул. Фотографов, 15</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span>Пн-Пт: 10:00 - 20:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <div class="footer-logo">Иван Иванов</div>
+                    <p class="footer-text">Профессиональный фотограф с многолетним опытом. Специализируюсь на свадебной, портретной и предметной фотографии.</p>
+                    <ul class="social-list">
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Услуги</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="#" class="footer-link">Свадебная фотосъёмка</a></li>
+                        <li class="footer-link-item"><a href="#" class="footer-link">Портретная фотосъёмка</a></li>
+                        <li class="footer-link-item"><a href="#" class="footer-link">Семейная фотосъёмка</a></li>
+                        <li class="footer-link-item"><a href="#" class="footer-link">Предметная фотосъёмка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Быстрые ссылки</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link-item"><a href="#portfolio" class="footer-link">Портфолио</a></li>
+                        <li class="footer-link-item"><a href="#about" class="footer-link">Обо мне</a></li>
+                        <li class="footer-link-item"><a href="#services" class="footer-link">Услуги</a></li>
+                        <li class="footer-link-item"><a href="#contact" class="footer-link">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Иван Иванов. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('mobile-menu--open');
+            overlay.classList.add('overlay--visible');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-menu--open');
+            overlay.classList.remove('overlay--visible');
+            document.body.style.overflow = 'auto';
+        });
+        
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-menu--open');
+            overlay.classList.remove('overlay--visible');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close menu when clicking on links
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('mobile-menu--open');
+                overlay.classList.remove('overlay--visible');
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.');
+                this.reset();
+            });
+        }
+    </script>
 </body>
 </html>

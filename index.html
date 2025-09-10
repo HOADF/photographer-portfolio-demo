@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артем Урнев - Профессиональный фотограф</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">Артем<span>Урнев</span></a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Портфолио</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Обо мне</a></li>
+                    <li class="nav__item"><a href="#blog" class="nav__link">Блог</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__social">
+                <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social__link"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social__link"><i class="fab fa-telegram"></i></a>
+            </div>
+            
+            <button class="header__toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="menuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li class="mobile-nav__item"><a href="#portfolio" class="mobile-nav__link">Портфолио</a></li>
+                <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Услуги</a></li>
+                <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">Обо мне</a></li>
+                <li class="mobile-nav__item"><a href="#blog" class="mobile-nav__link">Блог</a></li>
+                <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <div class="mobile-social">
+            <a href="#" class="mobile-social__link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="mobile-social__link"><i class="fab fa-vk"></i></a>
+            <a href="#" class="mobile-social__link"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__background">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Фоновая фотография" loading="eager">
+        </div>
+        
+        <div class="hero__content">
+            <h1 class="hero__title">Профессиональная фотосъемка для ваших особенных моментов</h1>
+            <p class="hero__subtitle">Создаю искренние и эмоциональные фотографии, которые расскажут вашу уникальную историю</p>
+            <button class="hero__button">Забронировать съемку</button>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('mobile-menu--open');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('mobile-menu--open');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close menu when clicking on links
+        const mobileLinks = document.querySelectorAll('.mobile-nav__link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('mobile-menu--open');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+</body>
+</html>

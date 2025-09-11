@@ -58,13 +58,14 @@ const menuToggle = document.getElementById('menuToggle');
                 this.reset();
             });
         }
-       document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.portfolio-image');
         
-        images.forEach(img => {
-            img.addEventListener('error', function() {
-                this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkZhbWlseSBQaG90bzwvdGV4dD48L3N2Zz4=';
-                this.alt = 'Изображение не загружено';
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.portfolio-image');
+            
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1iZGRsZSIgZHk9Ii4zZW0iPkZhbWlseSBQaG90bzwvdGV4dD48L3N2Zz4=';
+                    this.alt = 'Изображение не загружено';
+                });
             });
         });
-    });

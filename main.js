@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   images.forEach(img => {
     // Если изображение не загрузилось, заменяем его заглушкой
     img.addEventListener("error", function () {
-      this.src = "https://via.placeholder.com/600x400?text=Demo+Image";
+      this.src = "https://placehold.co/600x400?text=Demo+Image";
     });
   });
 });
